@@ -24,10 +24,24 @@ public class TargetSelectUI : MonoBehaviour
 
     private void UpdateTargets(bool b, int x, int y)
     {
-        if (!UIManager.Instance.SelectedCell) return;
-        targets.targets[x, y] = b;
-        Debug.Log($"at {x},{y}: {targets.targets[x, y]}");
-        UIManager.Instance.SelectedCell.command.outputTargets = targets;
+        if(targets != null)
+            targets.targets[x, y] = b;
+        //Debug.Log($"at {x},{y}: {targets.targets[x, y]}");
+    }
+
+    public void UpdateUI(TargetSelect target)
+    {
+        targets = null;
+        toggles[0].isOn = target.targets[0, 0];
+        toggles[1].isOn = target.targets[0, 1];
+        toggles[2].isOn = target.targets[0, 2];
+        toggles[3].isOn = target.targets[1, 0];
+        toggles[4].isOn = target.targets[1, 1];
+        toggles[5].isOn = target.targets[1, 2];
+        toggles[6].isOn = target.targets[2, 0];
+        toggles[7].isOn = target.targets[2, 1];
+        toggles[8].isOn = target.targets[2, 2];
+        targets = target;
     }
 }
 

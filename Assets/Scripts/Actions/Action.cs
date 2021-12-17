@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Action : ScriptableObject
 {
-    public abstract void DoAction(Cell cell, TargetSelect inputTargets, TargetSelect outputTargets);
+    public abstract float DoAction(Cell cell, TargetSelect inputTargets, TargetSelect outputTargets);
 }

@@ -6,7 +6,8 @@ using System.Reflection;
 [CreateAssetMenu(menuName = "Actions/Mutate")]
 public class A_Mutate : Action
 {
-    public override void DoAction(Cell cell, TargetSelect inputTargets, TargetSelect outputTargets)
+    public float cost = 10f;
+    public override float DoAction(Cell cell, TargetSelect inputTargets, TargetSelect outputTargets)
     {
         List<Cell> targets = outputTargets.GetTargets(cell.nearby);
         foreach (Cell c in targets)
@@ -16,5 +17,6 @@ public class A_Mutate : Action
 
             }
         }
+        return cost;
     }
 }

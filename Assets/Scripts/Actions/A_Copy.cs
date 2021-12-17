@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Actions/Copy")]
 public class A_Copy : Action
 {
-    public override void DoAction(Cell cell, TargetSelect inputTargets, TargetSelect outputTargets)
-    {
 
+    public override float DoAction(Cell cell, TargetSelect inputTargets, TargetSelect outputTargets)
+    {
+        return 0;
     }
 }

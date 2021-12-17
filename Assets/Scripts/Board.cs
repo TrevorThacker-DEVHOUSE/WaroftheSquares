@@ -11,10 +11,16 @@ public class Board : Singleton<Board>
     private UnityEngine.UI.GridLayoutGroup boardPanel;
     [SerializeField]
     private Cell defaultCell;
+    [SerializeField]
+    private Vector2Int initialWhite;
+    [SerializeField]
+    private Vector2Int initialBlack;
 
     private void Start()
     {
         InitializeBoard();
+        board[4, board.GetUpperBound(1)/2].Power = 100;
+        board[board.GetUpperBound(0) -4, board.GetUpperBound(1) / 2].Power = -100;
     }
 
     private void InitializeBoard()

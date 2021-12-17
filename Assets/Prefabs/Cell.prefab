@@ -89,8 +89,8 @@ MonoBehaviour:
   image: {fileID: 6870343020175150698}
   rect: {fileID: 6870343020175150700}
   command:
-    condition: {fileID: 11400000, guid: 6f2d150e5cb062a49b0316f7aa9c7b94, type: 2}
-    action: {fileID: 11400000, guid: 4be7a5a3b6b5147418b99f019ac72c2c, type: 2}
+    condition: {fileID: 0}
+    action: {fileID: 0}
     inputTargets:
       maximumTargets: 9
       requireMaxPower: 1

@@ -11,7 +11,8 @@ public class Command
     public TargetSelect outputTargets;
     public void DoCommand(Cell cell)
     {
-        if (condition == null || !condition.Check(cell)) return;
-        action?.DoAction(cell, inputTargets, outputTargets);
+        if (condition == null || action == null || !condition.Check(cell)) return;
+        float cost = action.DoAction(cell, inputTargets, outputTargets);
+        cell.Power -= cost;
     }
 }
